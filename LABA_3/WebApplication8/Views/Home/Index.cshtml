@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Enter your details:</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.Label("Name:")</td>
+            <td>@Html.TextBox("name")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Last Name:")</td>
+            <td>@Html.TextBox("lastname")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Sex:")</td>
+            <td>@Html.DropDownList("type", new SelectList(new[] { "male", "female" }))</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Age:")</td>
+            <td>@Html.TextBox("elevation", null, new { type = "number" })</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Adress:")</td>
+            <td>@Html.TextBox("adress")</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("Consent to data processing:")</td>
+            <td>@Html.CheckBox("open")</td>
+        </tr>
+    </table>
+
+    <br />
+    <input type="submit" value="Submit" />
+}
+
