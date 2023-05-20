@@ -1,0 +1,11 @@
+﻿@{
+    ViewBag.Title = "Duplication";
+    Layout = null;
+}
+<div>
+    @Html.ActionLink("Index", "Index")
+
+    <p>Пример</p>
+    <p><input type="operand" asp-for="@ViewData["operand1"]" /></p>
+    <p><input type="operand" asp-for="@ViewData["operand2"]" /></p>
+</div>
